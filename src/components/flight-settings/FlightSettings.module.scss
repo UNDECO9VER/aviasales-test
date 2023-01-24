@@ -1,0 +1,35 @@
+@import '../../../node_modules/npm-font-open-sans/open-sans';
+
+
+
+.flight-settings{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    width: 232px;
+    height: fit-content;
+    gap: 12px;
+    background: #ffffff;
+    font-family: 'Open Sans';
+
+    @media (max-width: 700px) {
+        width: 100%;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading{
+        text-transform: uppercase;
+        padding: 0 20px;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 600;
+    }
+
+
+}

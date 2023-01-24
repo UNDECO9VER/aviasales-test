@@ -1,0 +1,48 @@
+.ticket-card{
+    list-style: none;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 20px;
+    gap: 10px 0;
+
+    
+    &__price{
+        color: #2196F3;
+        font-size: 24px;
+        grid-column: span 2;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logo{
+        // height: 30px;
+        
+        img{
+            height: 100%;
+        }
+    }
+
+    &__wraper{
+        display:grid;   
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__description{
+        color: #A0B0B9;
+        text-transform: uppercase;
+    }
+}

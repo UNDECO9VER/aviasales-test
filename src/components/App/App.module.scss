@@ -1,0 +1,77 @@
+
+@font-face {
+	font-family: 'OpenSans'; 
+	src: url(../../fonts/open-sans/OpenSans.ttf); 
+}
+
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'OpenSans';
+}
+
+element{
+    --black_alpha_95: rgba(12,19,29,.95);
+    --white_alpha_72: hsla(0,0%,100%,.72);
+    --blue: #0c73fe;
+}
+
+.app{
+    max-width: 1080px;
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 20px;
+    min-height: 100vh;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex-grow: 1;
+    }
+
+    &__loading{
+        height: 10px;
+        background-image: repeating-linear-gradient(225deg, transparent, transparent 1rem, #0c73fe 1rem, #0c73fe 2rem);
+        background-size: 200% 200%;
+        animation: gradient 10s linear infinite;
+    }
+
+    &__main{
+        display: flex;
+        gap: 20px;
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+        }
+    }
+
+    &__logo{
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+
+    button{
+        color: white;
+        background-color: #2196F3;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        :hover{
+            opacity: 0.8;   
+        }
+    }
+
+    @keyframes gradient {
+        100% {
+            background-position: 100% 100%;
+        }
+    }
+}
